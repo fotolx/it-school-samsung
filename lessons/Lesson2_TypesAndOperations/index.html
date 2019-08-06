@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Типы данных. Преобразование типов.<br>Основные операции.</h1>
+    </header>
+
+    <section class="slide">
+        <h3>Объявление переменной</h3>
+        <em>
+            <тип>
+                <имя_переменной>[ = <значение>];
+        </em>
+        <br><br>Пример:
+        <pre>
+            <code>int a;</code>
+            <code>double b = 0.5;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Ввод переменных c консоли</h3>
+        <pre>
+            <code>Scanner in = new Scanner(System.in);</code>
+            <code>int x = in.nextInt(); </code>
+            <code>in.useLocale(Locale.US);</code>
+            <code>double r = in.nextDouble(); </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Вывод переменных на консоль</h3>
+        <pre>
+            <code>int x = 5;</code>
+            <code>double y = 7.32;</code>
+            <code>System.out.println(x + “ ” + y); </code>
+            <code>System.out.format(Locale.US, "x = %d, y = %.2f", a + b); </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Примитивные типы данных</h3>
+        <div class="columns two">
+            <ul>
+                <li>byte (целые числа, 1 байт)</li>
+                <li>short (целые числа, 2 байта)</li>
+                <li>int (целые числа, 4 байта)</li>
+                <li>long (целые числа, 8 байтов)</li>
+            </ul>
+
+            <ul>
+                <li>float (вещественные, 4 байта)</li>
+                <li>double (вещественные, 8 байт)</li>
+                <li>char (символ Unicode, 2 байта)</li>
+                <li>boolean (истина/ложь, 1 байт)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h3>Тип void</h3>
+        Пример 1:
+        <pre>
+            <code>int func(){</code>
+            <code>    return 0;</code>
+            <code>};</code>
+        </pre>
+        Пример 2:
+        <pre>
+            <code>void func(){</code>
+            <code>};</code>
+        </pre>
+
+    </section>
+
+    <section class="slide">
+        <h3>Целочисленные типы данных</h3>
+        <table>
+            <tr>
+                <th scope="col">Тип</th>
+                <th>Длина (байт / бит)</th>
+                <th>Диапазон</th>
+            </tr>
+            <tr>
+                <th scope="row">byte</th>
+                <td>1 (8)</td>
+                <td>–128 ... 127</td>
+            </tr>
+            <tr>
+                <th scope="row">short</th>
+                <td>2 (16)</td>
+                <td>–32.768 ... 32.767</td>
+            </tr>
+            <tr>
+                <th scope="row">int</th>
+                <td>4 (32)</td>
+                <td>–2.147.483.648 ... 2.147.483.647</td>
+            </tr>
+            <tr>
+                <th scope="row">long</th>
+                <td>8 (64)</td>
+                <td>-9.223.372.036.854.775.808 ...<br> 9.223.372.036.854.775.807</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section class="slide">
+        <h3>Тип byte</h3>
+        Пример:
+        <pre>
+            <code>byte value = 2;</code>
+            <code>byte value = -2;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип short</h3>
+        Пример:
+        <pre>
+            <code>short value = 3; </code>
+            <code>short value = -1000; </code>
+            </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип int</h3>
+        Пример:
+        <pre>
+            <code>byte a = 1;</code>
+            <code>byte b = 2;</code>
+            <code>byte result = a + b; </code>
+        </pre>
+        error: incompatible types: possible lossy conversion from int to byte.<br>
+        <pre>
+            <code>byte result = (byte)(a + b); </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип int. Разделение разрядов</h3>
+        <pre>
+            <code>int value = 234_567_789;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип long</h3>
+        Пример:
+        <pre>
+            <code>long value = 2; //Ошибка</code>
+            <code>long value = 2l; //Верно</code>
+            <code>long value = 2L; //Верно и удобно</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Числа с плавающей точкой</h3>
+        <table>
+            <tr>
+                <th scope="col">Тип</th>
+                <th>Длина (байт / бит)</th>
+                <th>Диапазон</th>
+            </tr>
+            <tr>
+                <th scope="row">float</th>
+                <td>4 (32)</td>
+                <td>-1.4*10<sup>-45</sup>, 3.4*10<sup>38</sup></td>
+            </tr>
+            <tr>
+                <th scope="row">double</th>
+                <td>8 (64)</td>
+                <td>-4.9*10<sup>-324</sup>, 1.8*10<sup>308</sup></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h3>Тип float</h3>
+        Пример:
+        <pre>
+            <code>float value = 30.6; //Неверно</code>
+            <code>float value = 30.6f; //Верно</code>
+            <code>float value = 30.6F; //Верно</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип double</h3>
+        Пример:
+        <pre>
+            <code>double z = 1.0; </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Тип double. Значения NaN и Infinity</h3>
+        Пример:
+        <pre>
+            <code>double valueI = 12.0 / 0;</code>
+            <code>System.out.println(valueI); //Infinity</code>
+            <code>double valueV = Math.sqrt(-4);</code>
+            <code>System.out.println(valueV); //NaN</code>
+        </pre>
+    </section>
+
+
+    <section class="slide">
+        <h3>Логические значения. Тип boolean</h3>
+        Возможные значения: false и true.
+        Пример:
+        <pre>
+            <code>boolean value = true; </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Символьные значения. Тип char</h3>
+        Пример:
+        <pre>
+            <code>char a=1067;</code>
+            <code>char b ='Ы';</code>
+            <code>System.out.println(a); //Ы</code>
+            <code>System.out.println((int)b); //1067</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Символьные значения. Тип char</h3>
+        Пример:
+        <pre>
+            <code>int a = 3;</code>
+            <code>char b = '1';</code>
+            <code>char result = (char) (a + b);</code>
+            <code>System.out.println(result); //4</code>
+        </pre>
+    </section>
+
+    <section class="slide" id="picture">
+        <h3>Автоматические (неявные) преобразования</h3>
+        <figure>
+            <img class="cover" src="Pictures/1.jpg" alt="">
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h3>Автоматические (неявные) преобразования</h3>
+        Пример:
+        <pre>
+            <code>byte a = 40;</code>
+            <code>byte b = 50;</code>
+            <code>byte с = 100;</code>
+            <code>int d = a* b / с;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Автоматические (неявные) преобразования</h3>
+        Пример:
+        <pre>
+            <code>int a = 40;</code>
+            <code>float b = 50.0F;</code>
+            <code>double с = 100.0;</code>
+            <code>double d = a * b / c;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Автоматические (неявные) преобразования</h3>
+        Пример:
+        <pre>
+            <code>int a = 2147483647;</code>
+             <code>float b = a; // от типа int к типу float</code>
+            <code>System.out.println(b);  // 2.14748365E9  </code>
+        </pre>
+    </section>
+
+
+    <section class="slide">
+        <h3>Явные преобразования. Пример использования.</h3>
+        Пример:
+        <pre>
+            <code>long a = 4;</code>
+             <code>int b = (int) a;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Явные преобразования. Несоответствие типов.</h3>
+        Пример:
+        <pre>
+            <code>byte b = 50;</code>
+            <code>b = b* 2;</code>
+             Ошибка: Error:(5, 14) java: incompatible types: possible lossy conversion from int to byte
+        </pre>
+        <pre>
+            <code>byte b = 50;</code>
+             <code>b = (byte) (b* 2);</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Явные преобразования. Отбрасывание старших битов.</h3>
+        Пример:
+        <pre>
+            <code>int a = 258;</code>
+            <code>byte b = (byte) a;</code>
+            <code>System.out.println(b); // 2</code>
+        </pre>
+    </section>
+
+
+    <section class="slide">
+        <h3>Явные преобразования. От чисел с точкой к целому.</h3>
+        Пример:
+        <pre>
+            <code>int a = 258;</code>
+            <code>byte b = (byte) a;</code>
+            <code>System.out.println(b); // 2</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Правильное округление</h3>
+        <pre>
+            <code>double a = 56.9898;</code>
+            <code>int b = (int)Math.round(a);</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Некоторые функции класса Math</h3>
+        <table>
+            <tr>
+                <th scope="col">Тип</th>
+                <th>Метод</th>
+                <th>Описание</th>
+            </tr>
+            <tr>
+                <th scope="row">double</th>
+                <td>abs(double a)</td>
+                <td>Возвращает модуль числа</sup></td>
+            </tr>
+            <tr>
+                <th scope="row">double</th>
+                <td>exp(double a)</td>
+                <td>Возвращает экспоненту аргумента</sup></td>
+            </tr>
+            <tr>
+                <th scope="row">double</th>
+                <td>sin(double a)</td>
+                <td>Возвращает синус аргумента</sup></td>
+            </tr>
+            <tr>
+                <th scope="row">double</th>
+                <td>random()</td>
+                <td>Возвращает случайное число от 0.0 (включительно)<br> до 1 (не включительно)</sup></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h3>Унарные арифметические операции</h3>
+        <ul>
+            <li>префиксный инкремент ( ++value )</li>
+            <li>постфиксный инкремент ( value++ )</li>
+            <li>префиксный декремент ( --value )</li>
+            <li>постфиксный декремент ( value-- )</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h3>Унарные арифметические операции</h3>
+        <pre>
+            <code>int a = 8;</code>
+            <code>int b = ++a; // a = 9, b = 9</code>
+            <code>a = 8; b = a++; // a = 9, b = 8</code>
+            <code>a = 8; b = --a; // a = 7, b = 7</code>
+            <code>a = 8; b = a--; // a = 7, b = 8</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Бинарные арифметические операции</h3>
+        <ul>
+            <li>вычитание («-»)</li>
+            <li>сложение («+»)</li>
+            <li>умножение («*»)</li>
+            <li>деление («/»)</li>
+            <li>остаток от деления («%»)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h3>Бинарные арифметические операции</h3>
+        <pre>
+            <code>int a = 10; int b = 7;</code>
+            <code>int i = a / b;// 1</code>
+            <code>double k = 10 / 4;// 2</code>
+            <code>double k = 10.0 / 4;// 2.5</code>
+            <code>int j = a % b;// 3</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Приоритет арифметических операций</h3>
+        <ul>
+            <li> ++ (инкремент), -- (декремент)</li>
+            <li>* (умножение), / (деление), % (остаток от деления)</li>
+            <li>+ (сложение), - (вычитание)</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h3>Приоритет арифметических операций</h3>
+        Пример:
+        <pre>
+            <code>int a = 8; int b = 7;</code>
+            <code>int i = a / b;// 1</code>
+            <code>int c = a + 5 * ++b; // 48</code>
+            <code>int d = (a + 5) * ++b; // 104</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h3>Операции с присваиванием</h3>
+        Пример:
+        <pre>
+            <code>int c = 3;</code>
+            <code>c += 5; // 8</code>
+            <code>c -= 2; // 6</code>
+            <code>c /= 3; // 2;</code>
+        </pre>
+    </section>
+
+</body>
+
+</html>
