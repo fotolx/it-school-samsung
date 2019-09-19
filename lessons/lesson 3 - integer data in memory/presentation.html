@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Лекция 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>IT ШКОЛА Samsung - Лекция 3</h1>
+    <p>Представление чисел в памяти. Поразрядные операции</p>
+  </header>
+
+  <section class="slide">
+      <h2>Представление чисел в памяти</h2>
+      <p>Зачем нам это знать?</p>
+    </section>
+
+  <section class="slide">
+    <h2>Системы счисления</h2>
+    <div>3507</div>
+    <div class="next">3⋅10<sup>3</sup> + 5⋅10<sup>2</sup> + 0⋅10<sup>1</sup> + 7⋅10<sup>0</sup></div>
+  </section>
+
+  <section class="slide">
+    <h2>Системы счисления</h2>
+    <div>6663<sub>8</sub></div>
+    <div class="next">6⋅8<sup>3</sup> + 6⋅8<sup>2</sup> + 6⋅8<sup>1</sup> + 3⋅8<sup>0</sup></div>
+  </section>
+
+  <section class="slide">
+    <h2>Системы счисления</h2>
+    <div>DB3<sub>16</sub></div>
+    <div class="next">D⋅16<sup>2</sup> + B⋅16<sup>1</sup> + 3⋅16<sup>0</sup></div>
+    <div class="next">В информатике принято использовать буквы латинского алфавита <br> A — 10, B — 11, С — 12 и так далее</div>
+  </section>
+
+  <section class="slide">
+    <h2>Перевод из системы с другим основанием в десятичную</h2>
+    <div>10011<sub>2</sub></div>
+    <div class="next">1⋅2<sup>4</sup> + 0⋅2<sup>3</sup> + 0⋅2<sup>2</sup> + 1⋅2<sup>1</sup> + 1⋅2<sup>0</sup> <span class="next"> = 16 + 2 + 1 = 19</span></div>
+  </section>
+
+  <section class="slide" id="to-binary">
+    <h2>Обратно чуть сложнее</h2>
+    <div>11</div>
+    <div class="next"><span>11 / 2 = 5</span><span>(остаток 1)</span><span class="right">1</span></div>
+    <div class="next"><span>5 / 2 = 2</span><span>(остаток 1)</span><span class="right">11</span></div>
+    <div class="next"><span>2 / 2 = 1</span><span>(остаток 0)</span><span class="right">011</span></div>
+    <div class="next"><span>1 / 2 = 0</span><span>(остаток 1)</span><span class="right">1011</span></div>
+    <div class="next">11 = 1011<sub>2</sub></div>
+    <style>
+      #to-binary span{
+        display: inline-block;
+        width: 200px;
+      }
+      #to-binary .right {
+        width: 100px;
+        text-align: right;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="action">
+    <h2>Действия в системах счисления с другим основанием</h2>
+    <div>Выполняются так же, как и в десятичной. Обычным столбиком</div>
+    <div class="columns">
+      <div class="first">
+          <sub>+</sub>&nbsp;56<sub>8</sub> <br>
+          &nbsp;&nbsp;67<sub>8</sub>  <br>
+          145<sub>8</sub>
+      </div>
+      <div>
+        <div class="next">6 + 7 = 13;</div>
+        <div class="next">13 > основания, поэтому 1 переносим в старший разряд</div>
+        <div class="next">Получим остаток, 13 - 8 = 5; 5 записываем</div>
+        <div class="next">и так далее</div>
+      </div>
+    </div>
+    <style>
+      #action  .columns{
+        display: flex;
+      }
+      #action .first {
+        margin-right: 24px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="binary-sum-table">
+    <h2>Таблица сложения в двоичной системе</h2>
+    <div class="columns">
+      <div>0<br>0<br>0</div>
+      <div class="next">0<br>1<br>1</div>
+      <div class="next">&nbsp;&nbsp;1<br>&nbsp;&nbsp;1<br>10</div>
+    </div>
+    <style>
+      #binary-sum-table  .columns{
+        display: flex;
+      }
+      #binary-sum-table .columns div {
+        margin-right: 48px;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>Представление целочисленных типов данных</h2>
+    <div>Данные примитивных типов представляются фиксированным количеством двоичных разрядов</div>
+    <div>Это очень важно, потому что задает ограничение на размер чисел</div>
+    <div>Например, если использовать всего три двоичных разряда, можно использовать только 8 различных значений: 000, 001, 010, 011, 100, 101, 110 и 111. То есть представлять 8 различных чисел.</div>
+  </section>
+
+  <section class="slide" id="java-types">
+    <h2>Целочисленные типы в Java</h2>
+    <table cellspacing="48">
+      <thead>
+        <tr><th>Название</th><th nowrap>Длина (байт/бит)</th><th>Область значений</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>byte</td><td>1 (8)</td><td>–128 .. 127</td></tr>
+        <tr><td>short</td><td>2 (16)</td><td>–32.768 .. 32.767</td></tr>
+        <tr><td>int</td><td>4 (32)</td><td>–2.147.483.648 .. 2.147.483.647</td></tr>
+        <tr><td>long</td><td>8 (64)</td><td>-9.223.372.036.854.775.808 .. 9.223.372.036.854.775.807</td></tr>
+        <tr><td>char</td><td>2 (16)</td><td>'\u0000' .. '\uffff', или 0 .. 65.535</td></tr>
+      </tbody>
+    </table>
+    <style>
+      #java-types th, #java-types td {
+
+        padding: 0 16px;
+      }
+    </style>
+  </section>
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
