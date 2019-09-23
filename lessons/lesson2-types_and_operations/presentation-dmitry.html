@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Лекция 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>IT ШКОЛА Samsung - Лекция 1</h1>
+    <p>Типы данных. Преобразование типов. Основные операции</p>
+  </header>
+
+  <section class="slide" id="binary">
+    <h2></h2>
+    <div>
+      001110010011001100110011001101100110011011100110011010010011001100011001100110000011001101
+      000000010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+      001110010011001100110011001101100110011011100110011010010011001100011001100110000011001101
+      111110010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+      001110010011001100110011001101100110011011100110011010010011001100011001100110000011001101
+      001110010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+      001110010011001100110011001101100110011011100110011010010011001100011001100110000011001101
+      000110010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+      001110010011001100110011001101100110011011100110011010010011001100011001100110000011001101
+      111110010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+      100110010011001100110011001101111110010011001100110011001101111110010011001100110011001101
+    </div>
+    <style>
+      #binary div {
+        overflow: hidden;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="java-types">
+    <h2>Примитивные типы данных</h2>
+    <ul>
+      <li>Целые числа (byte, short, int, long)</li>
+      <li>Числа с плавающей точкой (float, double)</li>
+      <li>Символы (char)</li>
+      <li>Логические значения (boolean)</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="java-types">
+    <h2>Целочисленные типы в Java</h2>
+    <table cellspacing="48">
+      <thead>
+        <tr><th>Название</th><th nowrap>Длина (байт/бит)</th><th>Область значений</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>byte</td><td>1 (8)</td><td>–128 .. 127</td></tr>
+        <tr><td>short</td><td>2 (16)</td><td>–32.768 .. 32.767</td></tr>
+        <tr><td>int</td><td>4 (32)</td><td>–2.147.483.648 .. 2.147.483.647</td></tr>
+        <tr><td>long</td><td>8 (64)</td><td>-9.223.372.036.854.775.808 .. 9.223.372.036.854.775.807</td></tr>
+        <tr><td>char</td><td>2 (16)</td><td>'\u0000' .. '\uffff', или 0 .. 65.535</td></tr>
+      </tbody>
+    </table>
+    <style>
+      #java-types th, #java-types td {
+
+        padding: 0 16px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="java-types">
+    <h2>Типы для работы с плавающей точкой</h2>
+    <table cellspacing="48">
+      <thead>
+        <tr><th>Название</th><th nowrap>Длина (байт/бит)</th><th>Область значений</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>float</td><td>4 (32)</td><td>-1.4⋅10<sup>-45</sup>, 3.4⋅10<sup>38</sup></td></tr>
+        <tr><td>double</td><td>8 (64)</td><td>-4.9⋅10<sup>-324</sup>, 1.8⋅10<sup>308</sup></td></tr>
+      </tbody>
+    </table>
+    <style>
+      #java-types th, #java-types td {
+
+        padding: 0 16px;
+      }
+    </style>
+  </section>
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
