@@ -19,11 +19,6 @@
   </header>
 
   <section class="slide">
-      <h2>Представление чисел в памяти</h2>
-      <p>Зачем нам это знать?</p>
-    </section>
-
-  <section class="slide">
     <h2>Системы счисления</h2>
     <div>3507</div>
     <div class="next">3⋅10<sup>3</sup> + 5⋅10<sup>2</sup> + 0⋅10<sup>1</sup> + 7⋅10<sup>0</sup></div>
@@ -43,102 +38,108 @@
   </section>
 
   <section class="slide">
-    <h2>Перевод из системы с другим основанием в десятичную</h2>
+    <h2>Системы счисления</h2>
     <div>10011<sub>2</sub></div>
-    <div class="next">1⋅2<sup>4</sup> + 0⋅2<sup>3</sup> + 0⋅2<sup>2</sup> + 1⋅2<sup>1</sup> + 1⋅2<sup>0</sup> <span class="next"> = 16 + 2 + 1 = 19</span></div>
-  </section>
-
-  <section class="slide" id="to-binary">
-    <h2>Обратно чуть сложнее</h2>
-    <div>11</div>
-    <div class="next"><span>11 / 2 = 5</span><span>(остаток 1)</span><span class="right">1</span></div>
-    <div class="next"><span>5 / 2 = 2</span><span>(остаток 1)</span><span class="right">11</span></div>
-    <div class="next"><span>2 / 2 = 1</span><span>(остаток 0)</span><span class="right">011</span></div>
-    <div class="next"><span>1 / 2 = 0</span><span>(остаток 1)</span><span class="right">1011</span></div>
-    <div class="next">11 = 1011<sub>2</sub></div>
-    <style>
-      #to-binary span{
-        display: inline-block;
-        width: 200px;
-      }
-      #to-binary .right {
-        width: 100px;
-        text-align: right;
-      }
-    </style>
-  </section>
-
-  <section class="slide" id="action">
-    <h2>Действия в системах счисления с другим основанием</h2>
-    <div>Выполняются так же, как и в десятичной. Обычным столбиком</div>
-    <div class="columns">
-      <div class="first">
-          <sub>+</sub>&nbsp;56<sub>8</sub> <br>
-          &nbsp;&nbsp;67<sub>8</sub>  <br>
-          145<sub>8</sub>
-      </div>
-      <div>
-        <div class="next">6 + 7 = 13;</div>
-        <div class="next">13 > основания, поэтому 1 переносим в старший разряд</div>
-        <div class="next">Получим остаток, 13 - 8 = 5; 5 записываем</div>
-        <div class="next">и так далее</div>
-      </div>
-    </div>
-    <style>
-      #action  .columns{
-        display: flex;
-      }
-      #action .first {
-        margin-right: 24px;
-      }
-    </style>
-  </section>
-
-  <section class="slide" id="binary-sum-table">
-    <h2>Таблица сложения в двоичной системе</h2>
-    <div class="columns">
-      <div>0<br>0<br>0</div>
-      <div class="next">0<br>1<br>1</div>
-      <div class="next">&nbsp;&nbsp;1<br>&nbsp;&nbsp;1<br>10</div>
-    </div>
-    <style>
-      #binary-sum-table  .columns{
-        display: flex;
-      }
-      #binary-sum-table .columns div {
-        margin-right: 48px;
-      }
-    </style>
+    <div class="next">1⋅2<sup>4</sup> + 0⋅2<sup>3</sup> + 0⋅2<sup>2</sup> + 1⋅2<sup>1</sup> + 1⋅2<sup>0</sup>
   </section>
 
   <section class="slide">
-    <h2>Представление целочисленных типов данных</h2>
-    <div>Данные примитивных типов представляются фиксированным количеством двоичных разрядов</div>
-    <div>Это очень важно, потому что задает ограничение на размер чисел</div>
-    <div>Например, если использовать всего три двоичных разряда, можно использовать только 8 различных значений: 000, 001, 010, 011, 100, 101, 110 и 111. То есть представлять 8 различных чисел.</div>
+    <h2>Представление чисел в памяти</h2>
+    <p>Данные примитивных типов представляются фиксированным количеством двоичных разрядов, принимающих значение 0 или 1</p>
+    <p class="next">Зачем нам это знать?</p>
+    <p class="copyright right grey">
+      demo01
+    </p>
   </section>
 
-  <section class="slide" id="java-types">
-    <h2>Целочисленные типы в Java</h2>
-    <table cellspacing="48">
-      <thead>
-        <tr><th>Название</th><th nowrap>Длина (байт/бит)</th><th>Область значений</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>byte</td><td>1 (8)</td><td>–128 .. 127</td></tr>
-        <tr><td>short</td><td>2 (16)</td><td>–32.768 .. 32.767</td></tr>
-        <tr><td>int</td><td>4 (32)</td><td>–2.147.483.648 .. 2.147.483.647</td></tr>
-        <tr><td>long</td><td>8 (64)</td><td>-9.223.372.036.854.775.808 .. 9.223.372.036.854.775.807</td></tr>
-        <tr><td>char</td><td>2 (16)</td><td>'\u0000' .. '\uffff', или 0 .. 65.535</td></tr>
-      </tbody>
-    </table>
+  <section class="slide" id="integer">
+    <h2>Представление целочисленных типов данных</h2>
+    <div>00000000</div>
+    <div class="next"><span style="background-color: red; color: white;">0</span>0000000</div>
+    <p class="copyright right grey">
+      demo02
+    </p>
     <style>
-      #java-types th, #java-types td {
-
-        padding: 0 16px;
+      #integer div {
+        font-size: 48px;
+        letter-spacing: 5px;
       }
     </style>
   </section>
+
+  <section class="slide" id="float">
+    <h2>Представление вещественных типов данных</h2>
+    <p class="copyright right grey">
+      demo03, demo04
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>IEEE 754-2008</h2>
+    <p>Широко используемый стандарт IEEE, описывающий формат представления чисел с плавающей точкой.</p>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Представление вещественных типов данных</h2>
+    <div class="binary">00000000000000000000000000000000</div>
+    <div class="columns next">
+      <img src="assets/philosoraptor.png" alt="" width="300">
+      <div class="next">Хм... А если использовать экспоненциальную запись чисел?</div>
+    </div>
+    <style>
+      #float .binary {
+        font-size: 32px;
+        letter-spacing: 5px;
+      }
+      #float .columns{
+        display: flex;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Экспоненциальная запись действительных чисел</h2>
+    <p>
+      Любое вещественное число A может быть записано в экспоненциальной форме:  A = ±m⋅q<sup>p</sup> , где:<br>
+      m  — мантисса числа;<br>
+      q  — основание системы счисления;<br>
+      р  — порядок числа.
+    </p>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Экспоненциальная запись действительных чисел</h2>
+    <p>
+      Например, число  472000000  может быть представлено так:<br>
+      472000000 = 4,72⋅10<sup>8</sup><br>
+      472000000 = 47,2⋅10<sup>7</sup><br>
+      472000000 = 472,0⋅10<sup>6</sup>
+    </p>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Представление вещественных типов данных</h2>
+    <img class="cover" src="assets/1.svg" alt="">
+    <img class="cover" style="margin-top: 60px;" src="assets/2.svg" alt="">
+    <p class="copyright right grey">
+      demo05, demo06
+    </p>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Поразрядные операции</h2>
+    <p>Что такое байт?</p>
+    <div class="next">
+      <p>Байт — это минимальная единица адресации компьютерной памяти.</p>
+      <p>Для большинства современных компьютеров это 8 бит.</p>
+    </div>
+    <p class="copyright right grey">
+      demo07
+    </p>
+  </section>
+
+
+
 
   <footer class="badge">
       <a href="https://github.com/shower/shower">Fork me on GitHub</a>
