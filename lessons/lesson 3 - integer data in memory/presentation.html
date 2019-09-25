@@ -46,7 +46,7 @@
   <section class="slide">
     <h2>Представление чисел в памяти</h2>
     <p>Данные примитивных типов представляются фиксированным количеством двоичных разрядов, принимающих значение 0 или 1</p>
-    <p class="next">Зачем нам это знать?</p>
+    <p>Зачем нам это знать?</p>
     <p class="copyright right grey">
       demo01
     </p>
@@ -54,15 +54,27 @@
 
   <section class="slide" id="integer">
     <h2>Представление целочисленных типов данных</h2>
-    <div>00000000</div>
-    <div class="next"><span style="background-color: red; color: white;">0</span>0000000</div>
+    <div class="columns">
+      <div>
+          <div class="code">00000000</div>
+          <div class="next code"><span style="background-color: red; color: white;">0</span>0000000</div>
+      </div>
+      <p class="question">где хранить знак числа?</p>
+    </div>
     <p class="copyright right grey">
       demo02
     </p>
     <style>
-      #integer div {
+      #integer .question {
+        margin-left: 32px;
+        font-size: 40px;
+      }
+      #integer .code {
         font-size: 48px;
         letter-spacing: 5px;
+      }
+      #integer .columns{
+        display: flex;
       }
     </style>
   </section>
@@ -84,7 +96,7 @@
     <div class="binary">00000000000000000000000000000000</div>
     <div class="columns next">
       <img src="assets/philosoraptor.png" alt="" width="300">
-      <div class="next">Хм... А если использовать экспоненциальную запись чисел?</div>
+      <p>Хм... А если использовать экспоненциальную запись чисел?</p>
     </div>
     <style>
       #float .binary {
@@ -93,6 +105,7 @@
       }
       #float .columns{
         display: flex;
+        align-items: center;
       }
     </style>
   </section>
@@ -134,7 +147,14 @@
       <p>Для большинства современных компьютеров это 8 бит.</p>
     </div>
     <p class="copyright right grey">
-      demo07
+      demo07 - demo09
+    </p>
+  </section>
+
+  <section class="slide" id="float">
+    <h2>Поразрядные операции</h2>
+    <p class="copyright right grey">
+      demo10
     </p>
   </section>
 

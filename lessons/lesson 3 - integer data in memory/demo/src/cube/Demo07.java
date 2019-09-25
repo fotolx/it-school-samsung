@@ -4,18 +4,26 @@ public class Demo07 {
     public static void main(String[] args)  {
         // побитовое и
         int i = 1436;
-        int mask = 4;
+        int mask = 13;
         int result = i & mask;
-        System.out.printf("3-й бит числа %d = %d \n", i, result > 0 ? 1 : 0);
-        System.out.printf("двоичное представление числа %d = %s \n", i, Integer.toBinaryString(i));
+
+        System.out.println(Utils.leftPad(Integer.toBinaryString(i), 16, "0"));
+        System.out.println(Utils.leftPad(Integer.toBinaryString(mask), 16, "0"));
+        System.out.println(Utils.leftPad("", 16, "-"));
+        System.out.println(Utils.leftPad(Integer.toBinaryString(result), 16, "0"));
+        System.out.println();
         System.out.println();
 
 
-
         // побитовое или
-        int a = 10;
-        System.out.printf("a = %s \n", Integer.toBinaryString(a));
-        a = a | mask;
-        System.out.printf("a = %s \n", Integer.toBinaryString(a));
+        i = 1113;
+        mask = 33;
+        result = i | mask;
+
+        System.out.println(Utils.leftPad(Integer.toBinaryString(i), 16, "0"));
+        System.out.println(Utils.leftPad(Integer.toBinaryString(mask), 16, "0"));
+        System.out.println(Utils.leftPad("", 16, "-"));
+        System.out.println(Utils.leftPad(Integer.toBinaryString(result), 16, "0"));
     }
+
 }
