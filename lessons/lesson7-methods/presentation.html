@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Лекция 7</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>IT ШКОЛА Samsung - Лекция 7</h1>
+    <p>Методы</p>
+  </header>
+
+  <sectioin class="slide">
+    <pre>
+      <code>public class Main {</code>
+      <code>  public static void main(String[] args) {</code>
+      <code>    Scanner in = new Scanner(System.in);</code>
+      <code>    while (in.hasNext()) {</code>
+      <code>      int n = in.nextInt();</code>
+      <code>      System.out.println(n * 2);</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </sectioin>
+
+  <section class="slide" id="definitions">
+    <!-- <h2>Терминология</h2> -->
+    <p>
+      Блок кода / Block - логически связанная группа инструкций или операторов.
+    </p>
+    <p class="next">
+      Процедура или подпрограмма / Procedure or Subroutine - блок кода имеющий имя. Процедура не возвращает значений.
+    </p>
+    <p class="next">
+      Функция / Function - Процедура возвращающая значение. Абстракция преобразования значений. Функция однозначно отображает одно множество значений в другое множество значений.
+    </p>
+  </section>
+
+  <sectioin class="slide">
+    <pre>
+      <code>public class Main {</code>
+      <code>  public static void main(String[] args) {</code>
+      <code>    // some code</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+    <p class="next">
+      Метод / Method - функция или процедура, связанная с объектным контекстом или программным интерфейсом.
+    </p>
+  </sectioin>
+
+  <sectioin class="slide" id="syntax">
+    <h2>Определение метода в Java</h2>
+      <pre>
+        <code>[модификаторы] <тип возвращаемого значения> <название_метода> ([<параметры>]) {</code>
+        <code>  <тело метода></code>
+        <code>}</code>
+      </pre>
+      <div class="splite">&nbsp;</div>
+      <pre>
+        <code>public static void print(String str) {</code>
+        <code>  // тело метода</code>
+        <code>}</code>
+      </pre>
+      <style>
+        #syntax {
+          font-size: 18px;
+        };
+        #syntax .splite {
+          height: 48px;
+        };
+      </style>
+    </sectioin>
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Лекция 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>IT ШКОЛА Samsung - Лекция 6</h1>
+    <p>Массивы</p>
+  </header>
+
+  <section class="slide" id="definitions">
+    <!-- <h2>Массивы</h2> -->
+    <p>Скаляр / Scalar / Primitive - значение примитивного типа данных.</p>
+    <p class="next">
+      Структурные типы / Composed types - типы которые состоят из нескольких скалярных значений, объединенных в одно таким образом, чтобы над этим объединенным значением можно было выполнять набор операций.
+    </p>
+    <p class="next">
+      Коллекция / Collection - структура данных, служащая для хранения набора значений и предоставляющая доступ к ним по индексам или ключам.
+    </p>
+    <p class="next">
+      Массив / Array — коллекция элементов, доступ к которым осуществляется по индексам.
+    </p>
+
+  </section>
+
+  <section class="slide" id="array-picture">
+    <h2>Представление массива</h2>
+    <div class="block-list">
+      <div class="block-list__item">0</div>
+      <div class="block-list__item">1</div>
+      <div class="block-list__item">2</div>
+      <div class="block-list__item">3</div>
+      <div class="block-list__item">...</div>
+      <div class="block-list__item">n-1</div>
+    </div>
+    <style>
+        #array-picture .block-list {
+          display: flex;
+        }
+        #array-picture .block-list div {
+          width: 100px;
+          height: 100px;
+          background-color: blueviolet;
+          margin-right: 10px;
+        }
+        #array-picture .block-list__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+      </style>
+  </section>
+
+  <sectioin class="slide">
+    <h2>Объявление массива</h2>
+    <pre>
+      <code>int a;</code>
+      <code>&nbsp;</code>
+      <code>int[] arr1;</code>
+      <code>int arr2[];</code>
+    </pre>
+  </sectioin>
+
+  <sectioin class="slide">
+    <h2>Создание массива</h2>
+    <pre>
+      <code>int a;</code>
+      <code>a = 5;</code>
+      <code>&nbsp;</code>
+      <code>int[] arr1;</code>
+      <code>arr1 = new int [5];</code>
+      <code>int arr2[] = new int [] {3, 11, 4, 6, 5};</code>
+    </pre>
+  </sectioin>
+
+  <sectioin class="slide">
+    <h2>Доступ к элементам массива</h2>
+    <div><имя массива>[<выражение целого типа>]</div>
+    <pre>
+      <code>int[] arr1 = new int [5];</code>
+      <code>arr[0] = 13;</code>
+      <code>arr[1] = 20;</code>
+      <code>&nbsp;</code>
+      <code>int a = arr[1];</code>
+    </pre>
+  </sectioin>
+
+  <sectioin class="slide">
+    <h2>Цикл for для работы с массивами</h2>
+    <pre>
+      <code>int arr[] = new int[10];</code>
+      <code>&nbsp;</code>
+      <code>for (int i = 0; i < arr.length; i++) {</code>
+      <code>  arr[i] = i * i;</code>
+      <code>}</code>
+    </pre>
+  </sectioin>
+
+  <sectioin class="slide">
+    <h2>Цикл for-each</h2>
+    <div>for (<тип переменной> <имя переменной>: <имя коллекции>) <блок></div>
+    <p></p>
+    <pre>
+      <code>int arr[] = new int[5] {1, 2, 3, 4, 5}</code>
+      <code>&nbsp;</code>
+      <code>int sum = 0;</code>
+      <code>for (int x: arr) {</code>
+      <code>  sum += x;</code>
+      <code>}</code>
+    </pre>
+  </sectioin>
+
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
