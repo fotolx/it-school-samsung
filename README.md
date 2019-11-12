@@ -11,6 +11,8 @@
     - [конструкторы](http://youtu.be/jPecz5HY8wY?hd=1)
     - [методы](http://youtu.be/jEr31Sh59uE?hd=1)
 13. Android. Обработчики событий.
+    - [введение](http://youtu.be/OW61qMXOqE8?hd=1)
+    - создание проекта
 14. Android. Множественные активности и интенты.
     - [введение](http://youtu.be/s3jPic3_h-g?hd=1)
     - [создание проекта](http://youtu.be/46682TPooTA?hd=1)
