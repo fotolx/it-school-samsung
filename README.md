@@ -12,10 +12,10 @@
     - [методы](http://youtu.be/jEr31Sh59uE?hd=1)
 13. Java. Наследование. Класс Object
     - [наследование, возможности переопределения](http://youtu.be/JBGKxVAKIPI?hd=1)
-13. Android. Обработчики событий.
+14. Android. Обработчики событий.
     - [введение](http://youtu.be/OW61qMXOqE8?hd=1)
     - создание проекта
-14. Android. Множественные активности и интенты.
+15. Android. Множественные активности и интенты.
     - [введение](http://youtu.be/s3jPic3_h-g?hd=1)
     - [создание проекта](http://youtu.be/46682TPooTA?hd=1)
     - [создание второй активности и макета](http://youtu.be/EMmqLHMjU8o?hd=1)
