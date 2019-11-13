@@ -13,7 +13,7 @@
 13. Java. Наследование. Класс Object
     - [наследование, возможности переопределения](http://youtu.be/JBGKxVAKIPI?hd=1)
     - [конструктор класса-наследника](http://youtu.be/VraBxQuKPw8?hd=1)
-    - класс Object
+    - [класс Object](http://youtu.be/TbaoMmLvdaM?hd=1)
 14. Android. Обработчики событий.
     - [введение](http://youtu.be/OW61qMXOqE8?hd=1)
     - создание проекта
