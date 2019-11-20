@@ -98,6 +98,15 @@ public class Square extends Shape {
         this.size = size;
     }
 
+    public Point getCorner() {
+        return corner;
+    }
+
+    @Override
+    public double getArea() {
+        return size * size;
+    }
+
     @Override
     public String toString() {
         return String.format("Square {corner: %s, size: %.2f, color: %s}", corner, size, getColor());

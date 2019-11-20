@@ -14,7 +14,7 @@
     - [наследование, возможности переопределения](http://youtu.be/JBGKxVAKIPI?hd=1)
     - [конструктор класса-наследника](http://youtu.be/VraBxQuKPw8?hd=1)
     - [класс Object](http://youtu.be/TbaoMmLvdaM?hd=1)
-    - [приведение типов в иерархии наследования](http://youtu.be/f5lNPNTfgcY?hd=1)
+    - [пример: семейство геометрических фигур](http://youtu.be/uypfPSudBJs?hd=1)
 14. Android. Обработчики событий.
     - [введение](http://youtu.be/OW61qMXOqE8?hd=1)
     - создание проекта
