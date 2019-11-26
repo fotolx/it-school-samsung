@@ -32,11 +32,13 @@ public interface Flyable {
     void land();
 }
 ```
+Для объявления интерфейса используется ключевое слово interface.
+
 Все методы интерфейса, по определению публичные и абстрактные, поэтому явно писать данные модификаторы не требуется.
 
 Реализуемые классом интерфейсы перечисляются после ключевого слова implements через запятую, т.е. класс может реализовывать несколько интерфейсов. Причем класс может реализовывать интерфейсы в дополнение к наследованию.
 ```java
-public class Wizard implements Flyable, Walkable {
+public class Wizard extends Union implements Flyable, Walkable {
     @Override
     public void fly() {
         //...
