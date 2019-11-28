@@ -25,7 +25,7 @@
     - [использование интента для запуска второй активности](http://youtu.be/BU8Uyp3tkK8?hd=1)
     - [передача текста второй активности](http://youtu.be/FYMes_TDdJM?hd=1)
     - [использование констант в качестве имени](http://youtu.be/P1bVxHw5Qec?hd=1)
-    - запуск активностей из других приложений
+    - [запуск активностей из других приложений](https://haschish.gitbook.io/it-cube-java-android/myltiple-activity/06)
 16. Java. Абстрактные классы и интерфейсы.
     - [абстрактный класс](http://youtu.be/Uz_Mh1M1mCI?hd=1)
     - [интерфейс](http://youtu.be/OqHb2yG1LEs?hd=1)
