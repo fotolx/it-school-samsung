@@ -16,7 +16,8 @@
     - [класс Object](http://youtu.be/TbaoMmLvdaM?hd=1)
     - [пример: семейство геометрических фигур](http://youtu.be/uypfPSudBJs?hd=1)
 14. [Android. Построение интерактивных приложений](https://haschish.gitbook.io/it-cube-java-android/intro)
-15. Android. Множественные активности и интенты.
+15. [Android. Жизненный цикл активности](https://haschish.gitbook.io/it-cube-java-android/intro-1)
+16. Android. Множественные активности и интенты.
     - [введение](http://youtu.be/s3jPic3_h-g?hd=1)
     - [создание проекта](http://youtu.be/46682TPooTA?hd=1)
     - [создание второй активности и макета](http://youtu.be/EMmqLHMjU8o?hd=1)
@@ -24,7 +25,7 @@
     - [передача текста второй активности](http://youtu.be/FYMes_TDdJM?hd=1)
     - [использование констант в качестве имени](http://youtu.be/P1bVxHw5Qec?hd=1)
     - [запуск активностей из других приложений](https://haschish.gitbook.io/it-cube-java-android/myltiple-activity/06)
-16. Java. Абстрактные классы и интерфейсы.
+17. Java. Абстрактные классы и интерфейсы.
     - [абстрактный класс](http://youtu.be/Uz_Mh1M1mCI?hd=1)
     - [интерфейс](http://youtu.be/OqHb2yG1LEs?hd=1)
 
