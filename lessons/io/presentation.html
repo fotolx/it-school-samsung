@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IT ШКОЛА Samsung</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>I/O</h1>
+    <p></p>
+  </header>
+
+  <section class="slide">
+    <img class="cover" src="assets/01.gif" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>поставим главную задачу</h2>
+    <p><strong>Программа должна иметь возможность передать данные кому-то еще</strong></p>
+    <p>Нам, как программистам, нужен некий механизм передачи данных</p>
+  </section>
+
+  <section class="slide">
+    <h2>Каким образом это можно сделать?</h2>
+    <p class="next">
+      - файловая система <br>
+      - сетевое взаимодействие <br>
+      - передача из одной области памяти в другую <br>
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>Передача данных</h2>
+    <p>Что это с технической точки зрения?</p>
+    <img class="cover next" src="assets/02.png" alt="" style="transform: translate(-50%, -20%);">
+  </section>
+
+  <section class="slide">
+    <h2>Типы потоков</h2>
+    <p>По направлению движения данных потоки делят на две группы:</p>
+    <p>
+      - поток ввода (Input) — данные поступают из потока в нашу программу. <br>
+      - поток вывода (Output) - данные поступают в поток из нашей программы.
+    </p>
+    <img class="cover next" src="assets/02.png" alt="" style="transform: translate(-50%, 50%);">
+  </section>
+
+  <section class="slide">
+    <h2>Тип передаваемых данных</h2>
+    <p>Вторым критерием разделения может служить ТИП передаваемых данных.</p>
+    <p>Байты не всегда являются удобным вариантом передачи — есть еще текст</p>
+  </section>
+
+  <section class="slide">
+    <h2>В итоге мы получаем 4 типа потоков</h2>
+    <p>Для каждого из этих типов Java предлагает отдельный базовый абстрактный класс.</p>
+    <p>
+      - InputStream — поток для чтения байтов (поток ввода) </br>
+      - OutputStream — поток для записи байтов (поток вывода) </br>
+      - Reader — поток для чтения символов (поток ввода) </br>
+      - Writer — поток для записи символов (поток вывода)
+    </p>
+    <p>
+      Основные методы read() и write()
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>Схема работы с потоком в упрощенном виде</h2>
+    <p>
+      1. Создается экземпляр потока </br>
+      2. Поток открывается (для чтения или записи) </br>
+      3. Производится чтение из потока/запись в поток </br>
+      4. Поток закрывается
+    </p>
+    <img class="cover" src="assets/07.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>Решим задачу — записи строки в файл</h2>
+    <p>В текстовый файл. Какой поток нам потребуется?</p>
+    <p>
+      - InputStream — поток для чтения байтов (поток ввода) </br>
+      - OutputStream — поток для записи байтов (поток вывода) </br>
+      - Reader — поток для чтения символов (поток ввода) </br>
+      - Writer — поток для записи символов (поток вывода)
+    </p>
+    <p class="next">Reader и Writer — абстрактные классы. Для работы c файлами будем использовать конкретные FileReader и FileWriter</p>
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="assets/11.png" alt="">
+  </section>
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
