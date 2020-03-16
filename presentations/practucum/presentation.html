@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IT ШКОЛА Samsung</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+        --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Массивы</h1>
+    <p></p>
+  </header>
+
+  <section class="slide">
+    <pre>
+      <code>let topScore1 = 500;</code>
+      <code>let topScore2 = 277;</code>
+      <code>let topScore3 = 230;</code>
+      <code>let topScore4 = 189;</code>
+      <code>// еще 95 подобных строк</code>
+      <code>let topScore100 = 10;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Массив</h2>
+    <p>упорядоченный набор элементов</p>
+    <p>используется для описания группы значений, связанных между собой</p>
+    <p>элементы могут повторятся</p>
+    <p>доступ к элементам происходит по порядковому номеру (индекс)</p>
+    <p>нумерация начинается с 0</p>
+  </section>
+
+  <section class="slide">
+    <h2>Создание</h2>
+    <p>Массивы создаются с помощью квадратных скобор (литерал массива)</p>
+    <pre>
+      <code>let topScores = [];</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Создание</h2>
+    <p>Массивы создаются с помощью квадратных скобор (литерал массива)</p>
+    <pre>
+      <code>let topScores = [500, 277, 230];</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Доступ к отдельным элементам</h2>
+    <pre>
+      <code>let topScores = [500, 277, 230];</code>
+      <code>console.log(topScores[2])</code>
+      <code>topScores[1] = 280;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Полезные методы</h2>
+    <pre>
+      <code>let topScores = [500, 277, 230];</code>
+      <code>console.log(topScores[2])</code>
+      <code>topScores[1] = 280;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Android заботится о выделении памяти для наших приложений.</h2>
+    <h2>Кроме того, он хранит различные типы данных в разных местах.</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Stack и Heap</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Ну зачем нам вообще нужна такая система?</h2>
+  </section>
+
+
+
+  <section class="slide">
+    <h2>Семь фактов о стеке и куче.</h2>
+  </section>
+
+  <section class="slide">
+    <h2>1. Мы сами не удаляем объекты, виртуальная машина отправляет сборщик мусора, когда считает это уместным</h2>
+  </section>
+
+  <section class="slide">
+    <h2>2. Локальные переменные и методы находятся в стеке</h2>
+  </section>
+
+  <section class="slide">
+    <h2>3. Переменные экземпляра класса находятся в куче, со своими объектами. Но ссылка на объект (его адрес) является локальной переменной в стеке</h2>
+  </section>
+
+  <section class="slide">
+    <h2>4. Мы контролируем то, что попадает в стек. Мы можем использовать объекты в куче, но только путем ссылки на них</h2>
+  </section>
+
+  <section class="slide">
+    <h2>5. Куча поддерживается в чистоте и актуальном состоянии сборщиком мусора</h2>
+  </section>
+
+  <section class="slide">
+    <h2>6. Объект собирается сборщиком, когда больше нет ссылок на него </h2>
+  </section>
+
+  <section class="slide">
+    <h2>7. Если мы попытаемся сослаться на объект, который не существует,мы получим исключение NullPointerException и приложение рухнет</h2>
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="assets/02.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>Так как мы доберемся до объектов?</h2>
+    <h3>myButton = (Button) findViewById(R.id.myButton);</h3>
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="assets/03.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h3>
+      myButton.setText <br />
+      myButton.setHeight <br />
+      myButton.setOnCLickListener <br />
+      myButton.setVisibility <br />
+    </h3>
+    <h3>Вообще класс Button имеет около 50 методов!</h3>
+  </section>
+
+  <section class="slide">
+    <h2>Использование Button и TextView из нашего макета</h2>
+    <h3>Приложение Java Meet UI</h3>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <h2 style="font-size: 48px;">https://haschish.gitbook.io/it-cube-java-android</h2>
+    <img class="cover" src="assets/04.png" alt="" style="transform: translate(-50%, -30%);">
+  </section>
+
+  <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="../../shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
